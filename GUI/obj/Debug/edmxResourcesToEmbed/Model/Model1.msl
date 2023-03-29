@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QLCuaHangTienLoiModelStoreContainer" CdmEntityContainer="QLCuaHangTienLoiEntities">
+    <EntitySetMapping Name="BillInfoes">
+      <EntityTypeMapping TypeName="QLCuaHangTienLoiModel.BillInfo">
+        <MappingFragment StoreEntitySet="BillInfo">
+          <ScalarProperty Name="totalbillinfo" ColumnName="totalbillinfo" />
+          <ScalarProperty Name="count" ColumnName="count" />
+          <ScalarProperty Name="idProduct" ColumnName="idProduct" />
+          <ScalarProperty Name="idBill" ColumnName="idBill" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="QLCuaHangTienLoiModel.Customer">
+        <MappingFragment StoreEntitySet="Customer">
+          <ScalarProperty Name="sdt" ColumnName="sdt" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Inputs">
+      <EntityTypeMapping TypeName="QLCuaHangTienLoiModel.Input">
+        <MappingFragment StoreEntitySet="Input">
+          <ScalarProperty Name="priceInput" ColumnName="priceInput" />
+          <ScalarProperty Name="count" ColumnName="count" />
+          <ScalarProperty Name="Date_Input" ColumnName="Date_Input" />
+          <ScalarProperty Name="idProduct" ColumnName="idProduct" />
+          <ScalarProperty Name="idCategory" ColumnName="idCategory" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductCategories">
+      <EntityTypeMapping TypeName="QLCuaHangTienLoiModel.ProductCategory">
+        <MappingFragment StoreEntitySet="ProductCategory">
+          <ScalarProperty Name="Xoa" ColumnName="Xoa" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypeAccs">
+      <EntityTypeMapping TypeName="QLCuaHangTienLoiModel.TypeAcc">
+        <MappingFragment StoreEntitySet="TypeAcc">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bills">
+      <EntityTypeMapping TypeName="QLCuaHangTienLoiModel.Bill">
+        <MappingFragment StoreEntitySet="Bill">
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="totalbill" ColumnName="totalbill" />
+          <ScalarProperty Name="idCustomer" ColumnName="idCustomer" />
+          <ScalarProperty Name="Date_" ColumnName="Date_" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="QLCuaHangTienLoiModel.Product">
+        <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="Xoa" ColumnName="Xoa" />
+          <ScalarProperty Name="discount" ColumnName="discount" />
+          <ScalarProperty Name="url" ColumnName="url" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="idCategory" ColumnName="idCategory" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Accounts">
+      <EntityTypeMapping TypeName="QLCuaHangTienLoiModel.Account">
+        <MappingFragment StoreEntitySet="Account">
+          <ScalarProperty Name="Xoa" ColumnName="Xoa" />
+          <ScalarProperty Name="idType" ColumnName="idType" />
+          <ScalarProperty Name="PassWord" ColumnName="PassWord" />
+          <ScalarProperty Name="Avatar" ColumnName="Avatar" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

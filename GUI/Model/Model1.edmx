@@ -1,0 +1,541 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="QLCuaHangTienLoiModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Account">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="100" />
+          <Property Name="DisplayName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Avatar" Type="nvarchar(max)" />
+          <Property Name="PassWord" Type="nvarchar" MaxLength="1000" Nullable="false" />
+          <Property Name="idType" Type="int" Nullable="false" />
+          <Property Name="Xoa" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Bill">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Date_" Type="date" Nullable="false" />
+          <Property Name="idCustomer" Type="int" Nullable="false" />
+          <Property Name="totalbill" Type="float" Nullable="false" />
+          <Property Name="status" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BillInfo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idBill" Type="int" Nullable="false" />
+          <Property Name="idProduct" Type="int" Nullable="false" />
+          <Property Name="count" Type="int" Nullable="false" />
+          <Property Name="totalbillinfo" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="sdt" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Input">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idCategory" Type="int" Nullable="false" />
+          <Property Name="idProduct" Type="int" Nullable="false" />
+          <Property Name="Date_Input" Type="datetime" Nullable="false" />
+          <Property Name="count" Type="int" Nullable="false" />
+          <Property Name="priceInput" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="idCategory" Type="int" Nullable="false" />
+          <Property Name="price" Type="float" Nullable="false" />
+          <Property Name="url" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="discount" Type="int" Nullable="false" />
+          <Property Name="Xoa" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProductCategory">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Xoa" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TypeAcc">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__Account__Xoa__2B3F6F97">
+          <End Role="TypeAcc" Type="Self.TypeAcc" Multiplicity="1" />
+          <End Role="Account" Type="Self.Account" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypeAcc">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Account">
+              <PropertyRef Name="idType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Bill__status__3B75D760">
+          <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
+          <End Role="Bill" Type="Self.Bill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customer">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Bill">
+              <PropertyRef Name="idCustomer" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BillInfo__idProd__412EB0B6">
+          <End Role="Product" Type="Self.Product" Multiplicity="1" />
+          <End Role="BillInfo" Type="Self.BillInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="BillInfo">
+              <PropertyRef Name="idProduct" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BillInfo__totalb__403A8C7D">
+          <End Role="Bill" Type="Self.Bill" Multiplicity="1" />
+          <End Role="BillInfo" Type="Self.BillInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Bill">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="BillInfo">
+              <PropertyRef Name="idBill" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Input__idProduct__47DBAE45">
+          <End Role="Product" Type="Self.Product" Multiplicity="1" />
+          <End Role="Input" Type="Self.Input" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Input">
+              <PropertyRef Name="idProduct" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Input__priceInpu__46E78A0C">
+          <End Role="ProductCategory" Type="Self.ProductCategory" Multiplicity="1" />
+          <End Role="Input" Type="Self.Input" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductCategory">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Input">
+              <PropertyRef Name="idCategory" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Product__Xoa__34C8D9D1">
+          <End Role="ProductCategory" Type="Self.ProductCategory" Multiplicity="1" />
+          <End Role="Product" Type="Self.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductCategory">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="idCategory" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="QLCuaHangTienLoiModelStoreContainer">
+          <EntitySet Name="Account" EntityType="Self.Account" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Bill" EntityType="Self.Bill" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BillInfo" EntityType="Self.BillInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Input" EntityType="Self.Input" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProductCategory" EntityType="Self.ProductCategory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TypeAcc" EntityType="Self.TypeAcc" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Account__Xoa__2B3F6F97" Association="Self.FK__Account__Xoa__2B3F6F97">
+            <End Role="TypeAcc" EntitySet="TypeAcc" />
+            <End Role="Account" EntitySet="Account" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Bill__status__3B75D760" Association="Self.FK__Bill__status__3B75D760">
+            <End Role="Customer" EntitySet="Customer" />
+            <End Role="Bill" EntitySet="Bill" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BillInfo__idProd__412EB0B6" Association="Self.FK__BillInfo__idProd__412EB0B6">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="BillInfo" EntitySet="BillInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BillInfo__totalb__403A8C7D" Association="Self.FK__BillInfo__totalb__403A8C7D">
+            <End Role="Bill" EntitySet="Bill" />
+            <End Role="BillInfo" EntitySet="BillInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Input__idProduct__47DBAE45" Association="Self.FK__Input__idProduct__47DBAE45">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="Input" EntitySet="Input" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Input__priceInpu__46E78A0C" Association="Self.FK__Input__priceInpu__46E78A0C">
+            <End Role="ProductCategory" EntitySet="ProductCategory" />
+            <End Role="Input" EntitySet="Input" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Product__Xoa__34C8D9D1" Association="Self.FK__Product__Xoa__34C8D9D1">
+            <End Role="ProductCategory" EntitySet="ProductCategory" />
+            <End Role="Product" EntitySet="Product" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="QLCuaHangTienLoiModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="QLCuaHangTienLoiEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="BillInfoes" EntityType="QLCuaHangTienLoiModel.BillInfo" />
+          <EntitySet Name="Customers" EntityType="QLCuaHangTienLoiModel.Customer" />
+          <EntitySet Name="Inputs" EntityType="QLCuaHangTienLoiModel.Input" />
+          <EntitySet Name="ProductCategories" EntityType="QLCuaHangTienLoiModel.ProductCategory" />
+          <EntitySet Name="TypeAccs" EntityType="QLCuaHangTienLoiModel.TypeAcc" />
+          <AssociationSet Name="FK__Input__priceInpu__44FF419A" Association="QLCuaHangTienLoiModel.FK__Input__priceInpu__44FF419A">
+            <End Role="ProductCategory" EntitySet="ProductCategories" />
+            <End Role="Input" EntitySet="Inputs" />
+          </AssociationSet>
+          <EntitySet Name="Bills" EntityType="QLCuaHangTienLoiModel.Bill" />
+          <AssociationSet Name="FK__Bill__status__3C69FB99" Association="QLCuaHangTienLoiModel.FK__Bill__status__3C69FB99">
+            <End Role="Customer" EntitySet="Customers" />
+            <End Role="Bill" EntitySet="Bills" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BillInfo__totalb__412EB0B6" Association="QLCuaHangTienLoiModel.FK__BillInfo__totalb__412EB0B6">
+            <End Role="Bill" EntitySet="Bills" />
+            <End Role="BillInfo" EntitySet="BillInfoes" />
+          </AssociationSet>
+          <EntitySet Name="Products" EntityType="QLCuaHangTienLoiModel.Product" />
+          <AssociationSet Name="FK__BillInfo__idProd__4222D4EF" Association="QLCuaHangTienLoiModel.FK__BillInfo__idProd__4222D4EF">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="BillInfo" EntitySet="BillInfoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Input__idProduct__48CFD27E" Association="QLCuaHangTienLoiModel.FK__Input__idProduct__48CFD27E">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="Input" EntitySet="Inputs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Product__Xoa__35BCFE0A" Association="QLCuaHangTienLoiModel.FK__Product__Xoa__35BCFE0A">
+            <End Role="ProductCategory" EntitySet="ProductCategories" />
+            <End Role="Product" EntitySet="Products" />
+          </AssociationSet>
+          <EntitySet Name="Accounts" EntityType="QLCuaHangTienLoiModel.Account" />
+          <AssociationSet Name="FK__Account__Xoa__2B3F6F97" Association="QLCuaHangTienLoiModel.FK__Account__Xoa__2B3F6F97">
+            <End Role="TypeAcc" EntitySet="TypeAccs" />
+            <End Role="Account" EntitySet="Accounts" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="BillInfo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idBill" Type="Int32" Nullable="false" />
+          <Property Name="idProduct" Type="Int32" Nullable="false" />
+          <Property Name="count" Type="Int32" Nullable="false" />
+          <Property Name="totalbillinfo" Type="Double" Nullable="false" />
+          <NavigationProperty Name="Bill" Relationship="QLCuaHangTienLoiModel.FK__BillInfo__totalb__412EB0B6" FromRole="BillInfo" ToRole="Bill" />
+          <NavigationProperty Name="Product" Relationship="QLCuaHangTienLoiModel.FK__BillInfo__idProd__4222D4EF" FromRole="BillInfo" ToRole="Product" />
+        </EntityType>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="sdt" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Bills" Relationship="QLCuaHangTienLoiModel.FK__Bill__status__3C69FB99" FromRole="Customer" ToRole="Bill" />
+        </EntityType>
+        <EntityType Name="Input">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idCategory" Type="Int32" Nullable="false" />
+          <Property Name="idProduct" Type="Int32" Nullable="false" />
+          <Property Name="Date_Input" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="count" Type="Int32" Nullable="false" />
+          <Property Name="priceInput" Type="Double" Nullable="false" />
+          <NavigationProperty Name="ProductCategory" Relationship="QLCuaHangTienLoiModel.FK__Input__priceInpu__44FF419A" FromRole="Input" ToRole="ProductCategory" />
+          <NavigationProperty Name="Product" Relationship="QLCuaHangTienLoiModel.FK__Input__idProduct__48CFD27E" FromRole="Input" ToRole="Product" />
+        </EntityType>
+        <EntityType Name="ProductCategory">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Xoa" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Inputs" Relationship="QLCuaHangTienLoiModel.FK__Input__priceInpu__44FF419A" FromRole="ProductCategory" ToRole="Input" />
+          <NavigationProperty Name="Products" Relationship="QLCuaHangTienLoiModel.FK__Product__Xoa__35BCFE0A" FromRole="ProductCategory" ToRole="Product" />
+        </EntityType>
+        <EntityType Name="TypeAcc">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Accounts" Relationship="QLCuaHangTienLoiModel.FK__Account__Xoa__2B3F6F97" FromRole="TypeAcc" ToRole="Account" />
+        </EntityType>
+        <Association Name="FK__Input__priceInpu__44FF419A">
+          <End Type="QLCuaHangTienLoiModel.ProductCategory" Role="ProductCategory" Multiplicity="1" />
+          <End Type="QLCuaHangTienLoiModel.Input" Role="Input" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductCategory">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Input">
+              <PropertyRef Name="idCategory" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Bill">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Date_" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="idCustomer" Type="Int32" Nullable="false" />
+          <Property Name="totalbill" Type="Double" Nullable="false" />
+          <Property Name="status" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Customer" Relationship="QLCuaHangTienLoiModel.FK__Bill__status__3C69FB99" FromRole="Bill" ToRole="Customer" />
+          <NavigationProperty Name="BillInfoes" Relationship="QLCuaHangTienLoiModel.FK__BillInfo__totalb__412EB0B6" FromRole="Bill" ToRole="BillInfo" />
+        </EntityType>
+        <Association Name="FK__Bill__status__3C69FB99">
+          <End Type="QLCuaHangTienLoiModel.Customer" Role="Customer" Multiplicity="1" />
+          <End Type="QLCuaHangTienLoiModel.Bill" Role="Bill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customer">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Bill">
+              <PropertyRef Name="idCustomer" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BillInfo__totalb__412EB0B6">
+          <End Type="QLCuaHangTienLoiModel.Bill" Role="Bill" Multiplicity="1" />
+          <End Type="QLCuaHangTienLoiModel.BillInfo" Role="BillInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Bill">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="BillInfo">
+              <PropertyRef Name="idBill" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="idCategory" Type="Int32" Nullable="false" />
+          <Property Name="price" Type="Double" Nullable="false" />
+          <Property Name="url" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="discount" Type="Int32" Nullable="false" />
+          <Property Name="Xoa" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="BillInfoes" Relationship="QLCuaHangTienLoiModel.FK__BillInfo__idProd__4222D4EF" FromRole="Product" ToRole="BillInfo" />
+          <NavigationProperty Name="Inputs" Relationship="QLCuaHangTienLoiModel.FK__Input__idProduct__48CFD27E" FromRole="Product" ToRole="Input" />
+          <NavigationProperty Name="ProductCategory" Relationship="QLCuaHangTienLoiModel.FK__Product__Xoa__35BCFE0A" FromRole="Product" ToRole="ProductCategory" />
+        </EntityType>
+        <Association Name="FK__BillInfo__idProd__4222D4EF">
+          <End Type="QLCuaHangTienLoiModel.Product" Role="Product" Multiplicity="1" />
+          <End Type="QLCuaHangTienLoiModel.BillInfo" Role="BillInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="BillInfo">
+              <PropertyRef Name="idProduct" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Input__idProduct__48CFD27E">
+          <End Type="QLCuaHangTienLoiModel.Product" Role="Product" Multiplicity="1" />
+          <End Type="QLCuaHangTienLoiModel.Input" Role="Input" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Input">
+              <PropertyRef Name="idProduct" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Product__Xoa__35BCFE0A">
+          <End Type="QLCuaHangTienLoiModel.ProductCategory" Role="ProductCategory" Multiplicity="1" />
+          <End Type="QLCuaHangTienLoiModel.Product" Role="Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductCategory">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="idCategory" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Account">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DisplayName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Avatar" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PassWord" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="idType" Type="Int32" Nullable="false" />
+          <Property Name="Xoa" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="TypeAcc" Relationship="QLCuaHangTienLoiModel.FK__Account__Xoa__2B3F6F97" FromRole="Account" ToRole="TypeAcc" />
+        </EntityType>
+        <Association Name="FK__Account__Xoa__2B3F6F97">
+          <End Type="QLCuaHangTienLoiModel.TypeAcc" Role="TypeAcc" Multiplicity="1" />
+          <End Type="QLCuaHangTienLoiModel.Account" Role="Account" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypeAcc">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Account">
+              <PropertyRef Name="idType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="QLCuaHangTienLoiModelStoreContainer" CdmEntityContainer="QLCuaHangTienLoiEntities">
+          <EntitySetMapping Name="BillInfoes">
+            <EntityTypeMapping TypeName="QLCuaHangTienLoiModel.BillInfo">
+              <MappingFragment StoreEntitySet="BillInfo">
+                <ScalarProperty Name="totalbillinfo" ColumnName="totalbillinfo" />
+                <ScalarProperty Name="count" ColumnName="count" />
+                <ScalarProperty Name="idProduct" ColumnName="idProduct" />
+                <ScalarProperty Name="idBill" ColumnName="idBill" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Customers">
+            <EntityTypeMapping TypeName="QLCuaHangTienLoiModel.Customer">
+              <MappingFragment StoreEntitySet="Customer">
+                <ScalarProperty Name="sdt" ColumnName="sdt" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Inputs">
+            <EntityTypeMapping TypeName="QLCuaHangTienLoiModel.Input">
+              <MappingFragment StoreEntitySet="Input">
+                <ScalarProperty Name="priceInput" ColumnName="priceInput" />
+                <ScalarProperty Name="count" ColumnName="count" />
+                <ScalarProperty Name="Date_Input" ColumnName="Date_Input" />
+                <ScalarProperty Name="idProduct" ColumnName="idProduct" />
+                <ScalarProperty Name="idCategory" ColumnName="idCategory" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductCategories">
+            <EntityTypeMapping TypeName="QLCuaHangTienLoiModel.ProductCategory">
+              <MappingFragment StoreEntitySet="ProductCategory">
+                <ScalarProperty Name="Xoa" ColumnName="Xoa" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TypeAccs">
+            <EntityTypeMapping TypeName="QLCuaHangTienLoiModel.TypeAcc">
+              <MappingFragment StoreEntitySet="TypeAcc">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Bills">
+            <EntityTypeMapping TypeName="QLCuaHangTienLoiModel.Bill">
+              <MappingFragment StoreEntitySet="Bill">
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="totalbill" ColumnName="totalbill" />
+                <ScalarProperty Name="idCustomer" ColumnName="idCustomer" />
+                <ScalarProperty Name="Date_" ColumnName="Date_" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Products">
+            <EntityTypeMapping TypeName="QLCuaHangTienLoiModel.Product">
+              <MappingFragment StoreEntitySet="Product">
+                <ScalarProperty Name="Xoa" ColumnName="Xoa" />
+                <ScalarProperty Name="discount" ColumnName="discount" />
+                <ScalarProperty Name="url" ColumnName="url" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="idCategory" ColumnName="idCategory" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Accounts">
+            <EntityTypeMapping TypeName="QLCuaHangTienLoiModel.Account">
+              <MappingFragment StoreEntitySet="Account">
+                <ScalarProperty Name="Xoa" ColumnName="Xoa" />
+                <ScalarProperty Name="idType" ColumnName="idType" />
+                <ScalarProperty Name="PassWord" ColumnName="PassWord" />
+                <ScalarProperty Name="Avatar" ColumnName="Avatar" />
+                <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

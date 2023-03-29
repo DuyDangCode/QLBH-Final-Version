@@ -1,0 +1,171 @@
+﻿<UserControl x:Class="GUI.View.HomeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GUI.View" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:viewmd="clr-namespace:GUI.ViewMD" xmlns:Wpf="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf" d:DataContext="{d:DesignInstance Type=viewmd:HomeViewMD}"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="800">
+
+    <Border CornerRadius="12"                    
+            BorderThickness="2">
+        <Border.BorderBrush>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#462AD8" Offset="0"/>
+                <GradientStop Color="#DA34AE" Offset="0.75"/>
+                <GradientStop Color="#8A16C1" Offset="1"/>
+            </LinearGradientBrush>
+        </Border.BorderBrush>
+        <Border.Background>
+            <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+                <GradientStop Color="#060531" Offset="0"/>
+                <GradientStop Color="#1B1448" Offset="1"/>
+            </LinearGradientBrush>
+        </Border.Background>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="8*" />
+                <ColumnDefinition Width="4*" />
+            </Grid.ColumnDefinitions>
+            <Grid.Resources>
+                <Style TargetType="materialDesign:PackIcon">
+                    <Setter Property="Width" Value="30"></Setter>
+                    <Setter Property="Height" Value="30"></Setter>
+                </Style>
+            </Grid.Resources>
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="2*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Margin="15">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0" Margin="5">
+                        <Border CornerRadius="12"                    
+                                BorderThickness="2">
+                            <Border.BorderBrush>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                    <GradientStop Color="#462AD8" Offset="0"/>
+                                    <GradientStop Color="#DA34AE" Offset="0.75"/>
+                                    <GradientStop Color="#8A16C1" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Border.BorderBrush>
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+                                    <GradientStop Color="Blue" Offset="0"/>
+                                    <GradientStop Color="Bisque" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <StackPanel>
+                                <Image Source="/Img/image-removebg-preview (4).png" Height="70" Width="80"></Image>
+                                <TextBlock Text="Total Customer" Margin="0,0,0,0" Foreground="White" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"/>
+                                <TextBlock Text="0" Foreground="White" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center"/>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+                    <Grid Grid.Column="1" Margin="5">
+                        <Border CornerRadius="12"                    
+                                BorderThickness="2">
+                            <Border.BorderBrush>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                    <GradientStop Color="#462AD8" Offset="0"/>
+                                    <GradientStop Color="#DA34AE" Offset="0.75"/>
+                                    <GradientStop Color="#8A16C1" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Border.BorderBrush>
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+                                    <GradientStop Color="Olive" Offset="0"/>
+                                    <GradientStop Color="Orange" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <StackPanel>
+                                <Image Source="/Img/image-removebg-preview (5).png" Height="70" Width="80"></Image>
+                                <TextBlock Text="Total Order" Margin="0,0,0,0" Foreground="White" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"/>
+                                <TextBlock Text="0" Foreground="White" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center"/>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+                    <Grid Grid.Column="2" Margin="5">
+                        <Border CornerRadius="12"                    
+                                BorderThickness="2">
+                            <Border.BorderBrush>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                    <GradientStop Color="#462AD8" Offset="0"/>
+                                    <GradientStop Color="#DA34AE" Offset="0.75"/>
+                                    <GradientStop Color="#8A16C1" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Border.BorderBrush>
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+                                    <GradientStop Color="Red" Offset="0"/>
+                                    <GradientStop Color="White" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <StackPanel>
+                                <Image Source="/Img/image-removebg-preview (6).png" Height="70" Width="80"></Image>
+                                <TextBlock Text="Total Revenue" Margin="0,0,0,0" Foreground="White" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"/>
+                                <TextBlock Text="0" Foreground="White" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center"/>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="1">
+                    
+                </Grid>
+            </Grid>
+            <StackPanel Grid.Column="1">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="350"></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Calendar Margin="15"/>
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <materialDesign:Card  
+                            Background="{DynamicResource PrimaryHueDarkBrush}" 
+                            Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}" 
+                            Margin="15,0,15,15" 
+                            Padding="8">
+                            <StackPanel>
+                                <TextBlock    
+                                    Margin="16 16 12 8"     
+                                    FontSize="16">  
+                                    Notes
+                                </TextBlock>
+                                <CheckBox     
+                                    Margin="16 4 16 0"    
+                                    Style="{StaticResource MaterialDesignUserForegroundCheckBox}">
+                                    Do something good
+                                </CheckBox>
+                                <CheckBox     
+                                    Margin="16 4 16 0"    
+                                    Style="{StaticResource MaterialDesignUserForegroundCheckBox}">
+                                    Take a breather
+                                </CheckBox>
+                                <CheckBox    
+                                    Margin="16 4 16 0"    
+                                    Style="{StaticResource MaterialDesignUserForegroundCheckBox}">
+                                    And go create
+                                </CheckBox>
+                                <Separator     
+                                    Style="{StaticResource MaterialDesignLightSeparator}" />
+                                <StackPanel   
+                                    Margin="8 0 8 8"     
+                                    Orientation="Horizontal"    
+                                    HorizontalAlignment="Right">
+                                </StackPanel>
+                            </StackPanel>
+                        </materialDesign:Card>
+                    </Grid>
+                </Grid>
+            </StackPanel>
+        </Grid>
+    </Border>
+</UserControl>

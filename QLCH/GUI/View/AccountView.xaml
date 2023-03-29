@@ -1,0 +1,186 @@
+﻿<UserControl x:Class="GUI.View.AccountView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GUI.View" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:viewmd="clr-namespace:GUI.ViewMD" 
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="800"
+             Background="Transparent" MouseMove="UserControl_MouseMove">
+
+    <Border CornerRadius="12">
+        <Border CornerRadius="15"                    
+            BorderThickness="2"
+            Opacity="0.95"
+            Background="White">
+            <Border.BorderBrush>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#462AD8" Offset="0"/>
+                    <GradientStop Color="#DA34AE" Offset="0.75"/>
+                    <GradientStop Color="#8A16C1" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.BorderBrush>
+            <Grid>
+                <TabControl>
+                    <TabItem Header="Thông tin nhân viên">
+                        <Grid Margin="150,50,150,50">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <materialDesign:Card Grid.Column="0" Margin="5"></materialDesign:Card>
+                            <materialDesign:Card Grid.Column="1" Margin="5"></materialDesign:Card>
+                            <Grid Grid.Column="0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="5*"></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Row="0">
+                                    <ToggleButton Height="200" Width="200"
+                                    Style="{StaticResource MaterialDesignActionToggleButton}"
+                                    ToolTip="MaterialDesignActionToggleButton">
+                                        <Image x:Name="imgAvatar"
+                                        Source="/Img/image-removebg-preview.png"></Image>
+                                    </ToggleButton>
+                                </Grid>
+                                <Grid Grid.Row="1">
+                                    <TextBlock x:Name="tbName" Text="Tên nhân viên" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold"/>
+                                </Grid>
+                            </Grid>
+                            <Grid Grid.Column="1">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Row="0" Margin="0,40,0,0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition></RowDefinition>
+                                        <RowDefinition></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Grid Grid.Row="0" Margin="0,10,0,10">
+                                        <TextBox Text="{Binding displaynamechange, UpdateSourceTrigger=PropertyChanged}" Margin="10,0,10,0" FontSize="16" materialDesign:HintAssist.Hint="Tên đăng nhập" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                                    </Grid>
+                                    <Grid Grid.Row="1" Margin="0,10,0,10">
+                                        <TextBox Text="{Binding changepass, UpdateSourceTrigger=PropertyChanged}" Margin="10,0,10,0" FontSize="16" materialDesign:HintAssist.Hint="Mật khẩu" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                                    </Grid>
+                                </Grid>
+                                <Grid Grid.Row="1" Margin="0,0,0,40">
+                                    <Button x:Name="btnChange" Margin="0,50,0,0"  
+                                        Command="{Binding ChangePassCommand}"
+                                        Style="{StaticResource MaterialDesignOutlinedDarkButton}"   
+                                        Width="160"
+                                        ToolTip="Resource name: MaterialDesignRaisedLightDarkButton">
+                                        Thay đổi mật khẩu
+                                    </Button>
+                                    <Button x:Name="btnAvatar" Margin="0,0,0,40"
+                                        Command="{Binding AddAvatarCommand}"
+                                        Style="{StaticResource MaterialDesignOutlinedDarkButton}"   
+                                        Width="120"
+                                        ToolTip="Resource name: MaterialDesignRaisedLightDarkButton">
+                                        Ảnh đại diện
+                                    </Button>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                    </TabItem>
+                    <TabItem Header="Quản lý tài khoản">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"></RowDefinition>
+                                <RowDefinition Height="auto"></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+
+                            <!--các element binding từ selected item-->
+                            <materialDesign:Card Grid.Row="0" Margin="5">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid Grid.Column="0">
+                                        <TextBox Text="{Binding username, UpdateSourceTrigger=PropertyChanged}" Margin="5" materialDesign:HintAssist.Hint="Tên đăng nhập" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                                    </Grid>
+                                    <Grid Grid.Column="1">
+                                        <TextBox Text="{Binding displayname, UpdateSourceTrigger=PropertyChanged}" Margin="5" materialDesign:HintAssist.Hint="Tên hiển thị" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                                    </Grid>
+                                    <Grid Grid.Column="2">
+                                        <TextBox Text="{Binding password, UpdateSourceTrigger=PropertyChanged}" Margin="5" materialDesign:HintAssist.Hint="Mật khẩu" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                                    </Grid>
+                                    <Grid Grid.Column="3">
+                                        <ComboBox DisplayMemberPath="name" ItemsSource="{Binding ListType}" SelectedItem="{Binding SelectedType, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" materialDesign:HintAssist.Hint="Loại tài khoản" IsEditable="True" Style="{StaticResource MaterialDesignFloatingHintComboBox}"></ComboBox>
+                                    </Grid>
+                                </Grid>
+                            </materialDesign:Card>
+
+                            <materialDesign:Card Grid.Row="1" Margin="5">
+                                <WrapPanel>
+                                    <Button Command="{Binding AddCommand}" Content="Thêm" Margin="5" Width="100"></Button>
+                                    <Button Command="{Binding EditCommand}" Content="Sửa" Margin="5" Width="100"></Button>
+                                    <Button Command="{Binding DeleteCommand}" Content="Xóa" Margin="5" Width="100"></Button>
+                                </WrapPanel>
+                            </materialDesign:Card>
+
+                            <materialDesign:Card Grid.Row="2" Margin="5" VerticalAlignment="Stretch">
+                                <ListView ItemsSource="{Binding ListAccount}" SelectedItem="{Binding SelectedAccount, Mode=OneWayToSource}">
+                                    <ListView.View>
+                                        <GridView>
+                                            <GridViewColumn Header="Tên đăng nhập" HeaderContainerStyle="{StaticResource MaterialDesignFlatAccentButton }" DisplayMemberBinding="{Binding UserName}"></GridViewColumn>
+                                            <GridViewColumn Header="Tên hiển thị" HeaderContainerStyle="{StaticResource MaterialDesignFlatAccentButton }" DisplayMemberBinding="{Binding DisplayName}"></GridViewColumn>
+                                            <GridViewColumn Header="Loại tài khoản" HeaderContainerStyle="{StaticResource MaterialDesignFlatAccentButton }" DisplayMemberBinding="{Binding idType}"></GridViewColumn>
+                                        </GridView>
+                                    </ListView.View>
+                                </ListView>
+                            </materialDesign:Card>
+                        </Grid>
+                    </TabItem>
+                    <TabItem Header="Khách hàng">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"></RowDefinition>
+                                <RowDefinition Height="auto"></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+
+                            <!--các element binding từ selected item-->
+                            <materialDesign:Card Grid.Row="0" Margin="5">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid Grid.Column="0">
+                                        <TextBox Text="{Binding cusname, UpdateSourceTrigger=PropertyChanged}" Margin="5" materialDesign:HintAssist.Hint="Tên khách hàng" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                                    </Grid>
+                                    <Grid Grid.Column="1">
+                                        <TextBox Text="{Binding sdt, UpdateSourceTrigger=PropertyChanged}" Margin="5" materialDesign:HintAssist.Hint="Số điện thoại" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                                    </Grid>
+                                </Grid>
+                            </materialDesign:Card>
+
+                            <materialDesign:Card Grid.Row="1" Margin="5">
+                                <WrapPanel>
+                                    <Button Command="{Binding AddCusCommand}" Content="+ Thành viên" Margin="5" Width="150"></Button>
+                                    <Button Command="{Binding DeleteCusCommand}" Content="Xóa" Margin="5" Width="150"></Button>
+                                </WrapPanel>
+                            </materialDesign:Card>
+
+                            <materialDesign:Card Grid.Row="2" Margin="5" VerticalAlignment="Stretch">
+                                <ListView ItemsSource="{Binding ListCustomer}" SelectedItem="{Binding SelectedCustomer, Mode=OneWayToSource}">
+                                    <ListView.View>
+                                        <GridView>
+                                            <GridViewColumn Header="Tên khách hàng" Width="100" HeaderContainerStyle="{StaticResource MaterialDesignFlatAccentButton }" DisplayMemberBinding="{Binding name}"></GridViewColumn>
+                                            <GridViewColumn Header="Số điện thoại" HeaderContainerStyle="{StaticResource MaterialDesignFlatAccentButton }" DisplayMemberBinding="{Binding sdt}"></GridViewColumn>
+                                        </GridView>
+                                    </ListView.View>
+                                </ListView>
+                            </materialDesign:Card>
+                        </Grid>
+                    </TabItem>
+                </TabControl>
+            </Grid>
+        </Border>
+    </Border>
+</UserControl>

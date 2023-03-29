@@ -1,0 +1,199 @@
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\bin\Debug\GUI.exe.config
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\bin\Debug\GUI.exe
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\bin\Debug\GUI.pdb
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\obj\Debug\App.g.cs
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\obj\Debug\GUI_MarkupCompile.cache
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\obj\Debug\GUI_MarkupCompile.lref
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\obj\Debug\GUI.g.resources
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\obj\Debug\GUI.Properties.Resources.resources
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\obj\Debug\GUI.exe
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\obj\Debug\GUI.pdb
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\bin\Debug\MaterialDesignColors.dll
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\bin\Debug\MaterialDesignColors.pdb
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\obj\Debug\App.baml
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\obj\Debug\GUI.csproj.CopyComplete
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\obj\Debug\Styles\ButtonStyles.baml
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\obj\Debug\Styles\UIColors.baml
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\obj\Debug\View\HomeView.g.cs
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\obj\Debug\View\ProductsView.g.cs
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\obj\Debug\View\HomeView.baml
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\obj\Debug\View\ProductsView.baml
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\obj\Debug\Login.g.cs
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\obj\Debug\MainWindow.g.cs
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\obj\Debug\Login.baml
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\obj\Debug\MainWindow.baml
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\obj\Debug\View\AccountView.g.cs
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\obj\Debug\View\OrderView.g.cs
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\obj\Debug\View\AccountView.baml
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\obj\Debug\View\OrderView.baml
+C:\Users\84967\OneDrive\Desktop\LTTQ\QLCH\GUI\bin\Debug\GUI.exe.config
+C:\Users\84967\OneDrive\Desktop\LTTQ\QLCH\GUI\bin\Debug\GUI.exe
+C:\Users\84967\OneDrive\Desktop\LTTQ\QLCH\GUI\bin\Debug\GUI.pdb
+C:\Users\84967\OneDrive\Desktop\LTTQ\QLCH\GUI\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\84967\OneDrive\Desktop\LTTQ\QLCH\GUI\bin\Debug\MaterialDesignColors.dll
+C:\Users\84967\OneDrive\Desktop\LTTQ\QLCH\GUI\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\84967\OneDrive\Desktop\LTTQ\QLCH\GUI\bin\Debug\MaterialDesignColors.pdb
+C:\Users\84967\OneDrive\Desktop\LTTQ\QLCH\GUI\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\84967\OneDrive\Desktop\LTTQ\QLCH\GUI\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\84967\OneDrive\Desktop\LTTQ\QLCH\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
+C:\Users\84967\OneDrive\Desktop\LTTQ\QLCH\GUI\obj\Debug\Styles\ButtonStyles.baml
+C:\Users\84967\OneDrive\Desktop\LTTQ\QLCH\GUI\obj\Debug\Styles\UIColors.baml
+C:\Users\84967\OneDrive\Desktop\LTTQ\QLCH\GUI\obj\Debug\View\AccountView.g.cs
+C:\Users\84967\OneDrive\Desktop\LTTQ\QLCH\GUI\obj\Debug\View\HomeView.g.cs
+C:\Users\84967\OneDrive\Desktop\LTTQ\QLCH\GUI\obj\Debug\Login.g.cs
+C:\Users\84967\OneDrive\Desktop\LTTQ\QLCH\GUI\obj\Debug\MainWindow.g.cs
+C:\Users\84967\OneDrive\Desktop\LTTQ\QLCH\GUI\obj\Debug\View\OrderView.g.cs
+C:\Users\84967\OneDrive\Desktop\LTTQ\QLCH\GUI\obj\Debug\View\ProductsView.g.cs
+C:\Users\84967\OneDrive\Desktop\LTTQ\QLCH\GUI\obj\Debug\App.g.cs
+C:\Users\84967\OneDrive\Desktop\LTTQ\QLCH\GUI\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\84967\OneDrive\Desktop\LTTQ\QLCH\GUI\obj\Debug\GUI_MarkupCompile.cache
+C:\Users\84967\OneDrive\Desktop\LTTQ\QLCH\GUI\obj\Debug\GUI_MarkupCompile.lref
+C:\Users\84967\OneDrive\Desktop\LTTQ\QLCH\GUI\obj\Debug\App.baml
+C:\Users\84967\OneDrive\Desktop\LTTQ\QLCH\GUI\obj\Debug\View\AccountView.baml
+C:\Users\84967\OneDrive\Desktop\LTTQ\QLCH\GUI\obj\Debug\View\HomeView.baml
+C:\Users\84967\OneDrive\Desktop\LTTQ\QLCH\GUI\obj\Debug\Login.baml
+C:\Users\84967\OneDrive\Desktop\LTTQ\QLCH\GUI\obj\Debug\MainWindow.baml
+C:\Users\84967\OneDrive\Desktop\LTTQ\QLCH\GUI\obj\Debug\View\OrderView.baml
+C:\Users\84967\OneDrive\Desktop\LTTQ\QLCH\GUI\obj\Debug\View\ProductsView.baml
+C:\Users\84967\OneDrive\Desktop\LTTQ\QLCH\GUI\obj\Debug\GUI.g.resources
+C:\Users\84967\OneDrive\Desktop\LTTQ\QLCH\GUI\obj\Debug\GUI.Properties.Resources.resources
+C:\Users\84967\OneDrive\Desktop\LTTQ\QLCH\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+C:\Users\84967\OneDrive\Desktop\LTTQ\QLCH\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+C:\Users\84967\OneDrive\Desktop\LTTQ\QLCH\GUI\obj\Debug\GUI.csproj.CopyComplete
+C:\Users\84967\OneDrive\Desktop\LTTQ\QLCH\GUI\obj\Debug\GUI.exe
+C:\Users\84967\OneDrive\Desktop\LTTQ\QLCH\GUI\obj\Debug\GUI.pdb
+C:\Users\84967\OneDrive\Desktop\Doc\QLCH\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
+C:\Users\84967\OneDrive\Desktop\Doc\QLCH\GUI\obj\Debug\Styles\ButtonStyles.baml
+C:\Users\84967\OneDrive\Desktop\Doc\QLCH\GUI\obj\Debug\Styles\UIColors.baml
+C:\Users\84967\OneDrive\Desktop\Doc\QLCH\GUI\obj\Debug\View\AccountView.g.cs
+C:\Users\84967\OneDrive\Desktop\Doc\QLCH\GUI\obj\Debug\View\HomeView.g.cs
+C:\Users\84967\OneDrive\Desktop\Doc\QLCH\GUI\obj\Debug\Login.g.cs
+C:\Users\84967\OneDrive\Desktop\Doc\QLCH\GUI\obj\Debug\MainWindow.g.cs
+C:\Users\84967\OneDrive\Desktop\Doc\QLCH\GUI\obj\Debug\View\OrderView.g.cs
+C:\Users\84967\OneDrive\Desktop\Doc\QLCH\GUI\obj\Debug\View\ProductsView.g.cs
+C:\Users\84967\OneDrive\Desktop\Doc\QLCH\GUI\obj\Debug\App.g.cs
+C:\Users\84967\OneDrive\Desktop\Doc\QLCH\GUI\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\84967\OneDrive\Desktop\Doc\QLCH\GUI\obj\Debug\GUI_MarkupCompile.cache
+C:\Users\84967\OneDrive\Desktop\Doc\QLCH\GUI\obj\Debug\GUI_MarkupCompile.lref
+C:\Users\84967\OneDrive\Desktop\Doc\QLCH\GUI\obj\Debug\GUI.exe
+C:\Users\84967\OneDrive\Desktop\Doc\QLCH\GUI\obj\Debug\GUI.pdb
+C:\Users\84967\OneDrive\Desktop\Doc\QLCH\GUI\bin\Debug\GUI.exe.config
+C:\Users\84967\OneDrive\Desktop\Doc\QLCH\GUI\bin\Debug\GUI.exe
+C:\Users\84967\OneDrive\Desktop\Doc\QLCH\GUI\bin\Debug\GUI.pdb
+C:\Users\84967\OneDrive\Desktop\Doc\QLCH\GUI\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\84967\OneDrive\Desktop\Doc\QLCH\GUI\bin\Debug\MaterialDesignColors.dll
+C:\Users\84967\OneDrive\Desktop\Doc\QLCH\GUI\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\84967\OneDrive\Desktop\Doc\QLCH\GUI\bin\Debug\MaterialDesignColors.pdb
+C:\Users\84967\OneDrive\Desktop\Doc\QLCH\GUI\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\84967\OneDrive\Desktop\Doc\QLCH\GUI\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\84967\OneDrive\Desktop\Doc\QLCH\GUI\obj\Debug\App.baml
+C:\Users\84967\OneDrive\Desktop\Doc\QLCH\GUI\obj\Debug\View\AccountView.baml
+C:\Users\84967\OneDrive\Desktop\Doc\QLCH\GUI\obj\Debug\View\HomeView.baml
+C:\Users\84967\OneDrive\Desktop\Doc\QLCH\GUI\obj\Debug\Login.baml
+C:\Users\84967\OneDrive\Desktop\Doc\QLCH\GUI\obj\Debug\MainWindow.baml
+C:\Users\84967\OneDrive\Desktop\Doc\QLCH\GUI\obj\Debug\View\OrderView.baml
+C:\Users\84967\OneDrive\Desktop\Doc\QLCH\GUI\obj\Debug\View\ProductsView.baml
+C:\Users\84967\OneDrive\Desktop\Doc\QLCH\GUI\obj\Debug\ResourceXAML\MainResource.baml
+C:\Users\84967\OneDrive\Desktop\Doc\QLCH\GUI\obj\Debug\GUI.g.resources
+C:\Users\84967\OneDrive\Desktop\Doc\QLCH\GUI\obj\Debug\GUI.Properties.Resources.resources
+C:\Users\84967\OneDrive\Desktop\Doc\QLCH\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+C:\Users\84967\OneDrive\Desktop\Doc\QLCH\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+C:\Users\84967\OneDrive\Desktop\Doc\QLCH\GUI\obj\Debug\GUI.csproj.CopyComplete
+C:\Users\84967\OneDrive\Desktop\Doc\QLCH\GUI\bin\Debug\EntityFramework.dll
+C:\Users\84967\OneDrive\Desktop\Doc\QLCH\GUI\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\84967\OneDrive\Desktop\Doc\QLCH\GUI\bin\Debug\EntityFramework.xml
+C:\Users\84967\OneDrive\Desktop\Doc\QLCH\GUI\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\84967\OneDrive\Desktop\Doc\QLCH\GUI\obj\Debug\GUI_Content.g.cs
+C:\Users\84967\OneDrive\Desktop\Doc\QLCH\GUI\bin\Debug\Microsoft.Expression.Interactions.dll
+C:\Users\84967\OneDrive\Desktop\Doc\QLCH\GUI\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\84967\OneDrive\Desktop\Doc\QLCH\GUI\bin\Debug\Microsoft.Expression.Interactions.xml
+C:\Users\84967\OneDrive\Desktop\Doc\QLCH\GUI\bin\Debug\System.Windows.Interactivity.xml
+C:\Users\84967\OneDrive\Desktop\Doc\QLCH\GUI\obj\Debug\View\InputView.g.cs
+C:\Users\84967\OneDrive\Desktop\Doc\QLCH\GUI\obj\Debug\View\RevenueView.g.cs
+C:\Users\84967\OneDrive\Desktop\Doc\QLCH\GUI\obj\Debug\View\InputView.baml
+C:\Users\84967\OneDrive\Desktop\Doc\QLCH\GUI\obj\Debug\View\RevenueView.baml
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\bin\Debug\EntityFramework.dll
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\bin\Debug\Microsoft.Expression.Interactions.dll
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\bin\Debug\EntityFramework.xml
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\bin\Debug\Microsoft.Expression.Interactions.xml
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\bin\Debug\System.Windows.Interactivity.xml
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\obj\Debug\View\InputView.g.cs
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\obj\Debug\View\RevenueView.g.cs
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\obj\Debug\GUI_Content.g.cs
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\obj\Debug\ResourceXAML\MainResource.baml
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\obj\Debug\View\InputView.baml
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\obj\Debug\View\RevenueView.baml
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\bin\Debug\LiveCharts.dll
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\bin\Debug\LiveCharts.pdb
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\bin\Debug\LiveCharts.xml
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\84967\OneDrive\Desktop\QLCH\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\bin\Debug\GUI.exe.config
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\bin\Debug\GUI.exe
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\bin\Debug\GUI.pdb
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\bin\Debug\EntityFramework.dll
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\bin\Debug\LiveCharts.dll
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\bin\Debug\MaterialDesignColors.dll
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\bin\Debug\Microsoft.Expression.Interactions.dll
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\bin\Debug\EntityFramework.xml
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\bin\Debug\LiveCharts.pdb
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\bin\Debug\LiveCharts.xml
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\bin\Debug\MaterialDesignColors.pdb
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\bin\Debug\Microsoft.Expression.Interactions.xml
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\bin\Debug\System.Windows.Interactivity.xml
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\obj\Debug\GUI.csproj.SuggestedBindingRedirects.cache
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\obj\Debug\Styles\ButtonStyles.baml
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\obj\Debug\Styles\UIColors.baml
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\obj\Debug\View\AccountView.g.cs
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\obj\Debug\View\HomeView.g.cs
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\obj\Debug\Login.g.cs
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\obj\Debug\MainWindow.g.cs
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\obj\Debug\View\InputView.g.cs
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\obj\Debug\View\OrderView.g.cs
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\obj\Debug\View\ProductsView.g.cs
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\obj\Debug\View\RevenueView.g.cs
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\obj\Debug\App.g.cs
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\obj\Debug\GUI_Content.g.cs
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\obj\Debug\GUI_MarkupCompile.cache
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\obj\Debug\GUI_MarkupCompile.lref
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\obj\Debug\App.baml
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\obj\Debug\ResourceXAML\MainResource.baml
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\obj\Debug\View\AccountView.baml
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\obj\Debug\View\HomeView.baml
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\obj\Debug\Login.baml
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\obj\Debug\MainWindow.baml
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\obj\Debug\View\InputView.baml
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\obj\Debug\View\OrderView.baml
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\obj\Debug\View\ProductsView.baml
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\obj\Debug\View\RevenueView.baml
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\obj\Debug\GUI.g.resources
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\obj\Debug\GUI.Properties.Resources.resources
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\obj\Debug\GUI.csproj.CopyComplete
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\obj\Debug\GUI.exe
+C:\Users\THANH DUY\Downloads\QLCH\QLCH\GUI\obj\Debug\GUI.pdb

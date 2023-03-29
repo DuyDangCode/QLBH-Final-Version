@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QLCuaHangTienLoiModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="QLCuaHangTienLoiEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BillInfoes" EntityType="QLCuaHangTienLoiModel.BillInfo" />
+    <EntitySet Name="Customers" EntityType="QLCuaHangTienLoiModel.Customer" />
+    <EntitySet Name="Inputs" EntityType="QLCuaHangTienLoiModel.Input" />
+    <EntitySet Name="ProductCategories" EntityType="QLCuaHangTienLoiModel.ProductCategory" />
+    <EntitySet Name="TypeAccs" EntityType="QLCuaHangTienLoiModel.TypeAcc" />
+    <AssociationSet Name="FK__Input__priceInpu__44FF419A" Association="QLCuaHangTienLoiModel.FK__Input__priceInpu__44FF419A">
+      <End Role="ProductCategory" EntitySet="ProductCategories" />
+      <End Role="Input" EntitySet="Inputs" />
+    </AssociationSet>
+    <EntitySet Name="Bills" EntityType="QLCuaHangTienLoiModel.Bill" />
+    <AssociationSet Name="FK__Bill__status__3C69FB99" Association="QLCuaHangTienLoiModel.FK__Bill__status__3C69FB99">
+      <End Role="Customer" EntitySet="Customers" />
+      <End Role="Bill" EntitySet="Bills" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BillInfo__totalb__412EB0B6" Association="QLCuaHangTienLoiModel.FK__BillInfo__totalb__412EB0B6">
+      <End Role="Bill" EntitySet="Bills" />
+      <End Role="BillInfo" EntitySet="BillInfoes" />
+    </AssociationSet>
+    <EntitySet Name="Products" EntityType="QLCuaHangTienLoiModel.Product" />
+    <AssociationSet Name="FK__BillInfo__idProd__4222D4EF" Association="QLCuaHangTienLoiModel.FK__BillInfo__idProd__4222D4EF">
+      <End Role="Product" EntitySet="Products" />
+      <End Role="BillInfo" EntitySet="BillInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Input__idProduct__48CFD27E" Association="QLCuaHangTienLoiModel.FK__Input__idProduct__48CFD27E">
+      <End Role="Product" EntitySet="Products" />
+      <End Role="Input" EntitySet="Inputs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Product__Xoa__35BCFE0A" Association="QLCuaHangTienLoiModel.FK__Product__Xoa__35BCFE0A">
+      <End Role="ProductCategory" EntitySet="ProductCategories" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+    <EntitySet Name="Accounts" EntityType="QLCuaHangTienLoiModel.Account" />
+    <AssociationSet Name="FK__Account__Xoa__2B3F6F97" Association="QLCuaHangTienLoiModel.FK__Account__Xoa__2B3F6F97">
+      <End Role="TypeAcc" EntitySet="TypeAccs" />
+      <End Role="Account" EntitySet="Accounts" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="BillInfo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idBill" Type="Int32" Nullable="false" />
+    <Property Name="idProduct" Type="Int32" Nullable="false" />
+    <Property Name="count" Type="Int32" Nullable="false" />
+    <Property Name="totalbillinfo" Type="Double" Nullable="false" />
+    <NavigationProperty Name="Bill" Relationship="QLCuaHangTienLoiModel.FK__BillInfo__totalb__412EB0B6" FromRole="BillInfo" ToRole="Bill" />
+    <NavigationProperty Name="Product" Relationship="QLCuaHangTienLoiModel.FK__BillInfo__idProd__4222D4EF" FromRole="BillInfo" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="sdt" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Bills" Relationship="QLCuaHangTienLoiModel.FK__Bill__status__3C69FB99" FromRole="Customer" ToRole="Bill" />
+  </EntityType>
+  <EntityType Name="Input">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idCategory" Type="Int32" Nullable="false" />
+    <Property Name="idProduct" Type="Int32" Nullable="false" />
+    <Property Name="Date_Input" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="count" Type="Int32" Nullable="false" />
+    <Property Name="priceInput" Type="Double" Nullable="false" />
+    <NavigationProperty Name="ProductCategory" Relationship="QLCuaHangTienLoiModel.FK__Input__priceInpu__44FF419A" FromRole="Input" ToRole="ProductCategory" />
+    <NavigationProperty Name="Product" Relationship="QLCuaHangTienLoiModel.FK__Input__idProduct__48CFD27E" FromRole="Input" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="ProductCategory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Xoa" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Inputs" Relationship="QLCuaHangTienLoiModel.FK__Input__priceInpu__44FF419A" FromRole="ProductCategory" ToRole="Input" />
+    <NavigationProperty Name="Products" Relationship="QLCuaHangTienLoiModel.FK__Product__Xoa__35BCFE0A" FromRole="ProductCategory" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="TypeAcc">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Accounts" Relationship="QLCuaHangTienLoiModel.FK__Account__Xoa__2B3F6F97" FromRole="TypeAcc" ToRole="Account" />
+  </EntityType>
+  <Association Name="FK__Input__priceInpu__44FF419A">
+    <End Type="QLCuaHangTienLoiModel.ProductCategory" Role="ProductCategory" Multiplicity="1" />
+    <End Type="QLCuaHangTienLoiModel.Input" Role="Input" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductCategory">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Input">
+        <PropertyRef Name="idCategory" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Bill">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Date_" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="idCustomer" Type="Int32" Nullable="false" />
+    <Property Name="totalbill" Type="Double" Nullable="false" />
+    <Property Name="status" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Customer" Relationship="QLCuaHangTienLoiModel.FK__Bill__status__3C69FB99" FromRole="Bill" ToRole="Customer" />
+    <NavigationProperty Name="BillInfoes" Relationship="QLCuaHangTienLoiModel.FK__BillInfo__totalb__412EB0B6" FromRole="Bill" ToRole="BillInfo" />
+  </EntityType>
+  <Association Name="FK__Bill__status__3C69FB99">
+    <End Type="QLCuaHangTienLoiModel.Customer" Role="Customer" Multiplicity="1" />
+    <End Type="QLCuaHangTienLoiModel.Bill" Role="Bill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Bill">
+        <PropertyRef Name="idCustomer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BillInfo__totalb__412EB0B6">
+    <End Type="QLCuaHangTienLoiModel.Bill" Role="Bill" Multiplicity="1" />
+    <End Type="QLCuaHangTienLoiModel.BillInfo" Role="BillInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bill">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="BillInfo">
+        <PropertyRef Name="idBill" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="idCategory" Type="Int32" Nullable="false" />
+    <Property Name="price" Type="Double" Nullable="false" />
+    <Property Name="url" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="discount" Type="Int32" Nullable="false" />
+    <Property Name="Xoa" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="BillInfoes" Relationship="QLCuaHangTienLoiModel.FK__BillInfo__idProd__4222D4EF" FromRole="Product" ToRole="BillInfo" />
+    <NavigationProperty Name="Inputs" Relationship="QLCuaHangTienLoiModel.FK__Input__idProduct__48CFD27E" FromRole="Product" ToRole="Input" />
+    <NavigationProperty Name="ProductCategory" Relationship="QLCuaHangTienLoiModel.FK__Product__Xoa__35BCFE0A" FromRole="Product" ToRole="ProductCategory" />
+  </EntityType>
+  <Association Name="FK__BillInfo__idProd__4222D4EF">
+    <End Type="QLCuaHangTienLoiModel.Product" Role="Product" Multiplicity="1" />
+    <End Type="QLCuaHangTienLoiModel.BillInfo" Role="BillInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="BillInfo">
+        <PropertyRef Name="idProduct" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Input__idProduct__48CFD27E">
+    <End Type="QLCuaHangTienLoiModel.Product" Role="Product" Multiplicity="1" />
+    <End Type="QLCuaHangTienLoiModel.Input" Role="Input" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Input">
+        <PropertyRef Name="idProduct" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Product__Xoa__35BCFE0A">
+    <End Type="QLCuaHangTienLoiModel.ProductCategory" Role="ProductCategory" Multiplicity="1" />
+    <End Type="QLCuaHangTienLoiModel.Product" Role="Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductCategory">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="idCategory" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Account">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DisplayName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Avatar" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PassWord" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="idType" Type="Int32" Nullable="false" />
+    <Property Name="Xoa" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="TypeAcc" Relationship="QLCuaHangTienLoiModel.FK__Account__Xoa__2B3F6F97" FromRole="Account" ToRole="TypeAcc" />
+  </EntityType>
+  <Association Name="FK__Account__Xoa__2B3F6F97">
+    <End Type="QLCuaHangTienLoiModel.TypeAcc" Role="TypeAcc" Multiplicity="1" />
+    <End Type="QLCuaHangTienLoiModel.Account" Role="Account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypeAcc">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Account">
+        <PropertyRef Name="idType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

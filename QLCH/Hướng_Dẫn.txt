@@ -1,0 +1,2 @@
+- File QLCHTL.sql sửa dòng thêm tài khoản( chỗ tk admin thay N'C:\Users\84967\OneDrive\Desktop\QLCH\GUI\Img\Avatar.jpg' thành N'Đường dẫn avatar của bạn')
+- File App.config sửa (data source=ASUS-571GT;initial catalog=QLCuaHangTienLoi) thành data source của máy.
